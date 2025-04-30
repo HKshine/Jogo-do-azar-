@@ -31,7 +31,21 @@ Mas cuidado: **se errar 3 vezes**, algo muito mais profundo acontece...
 - Acesso à internet (caso use o modo reverso)
 
 ### Passos:
-
-1. Torna o script executável:
+1. Clone
    ```
-   chmod +x shine_game.sh
+   git clone
+   Cd jogo do azar
+   ```
+
+3. Torna o script executável:
+   ```
+   chmod +x jogo
+   ```
+4. Após dar permissão, execute:
+   ```
+   bash jogo
+   ```
+
+⚠️ Aviso Legal
+Este script foi criado para fins educacionais e demonstrações controladas.
+Não o utilizes em sistemas sem permissão explícita. A utilização indevida pode ser considerada crime cibernético.
