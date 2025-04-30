@@ -3,7 +3,7 @@
 Um mini jogo de terminal com estilo, arte, e... um toque oculto.  
 Inspirado por **Nerú Shine**, este jogo é simples na superfície — mas esconde um poder letal no fundo.
 
-![Banner](https://your-image-link-if-applicable.com)
+![Banner](Screenshot_20250430-230955.png )
 
 
 ## ✨ Sobre
