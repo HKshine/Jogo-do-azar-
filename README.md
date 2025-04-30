@@ -34,7 +34,7 @@ Mas cuidado: **se errar 3 vezes**, algo muito mais profundo acontece...
 1. Clone
    ```
    git clone
-   Cd jogo do azar
+   Cd jogo-do-azar
    ```
 
 3. Torna o script executável:
@@ -45,7 +45,16 @@ Mas cuidado: **se errar 3 vezes**, algo muito mais profundo acontece...
    ```
    bash jogo
    ```
+No lado atacante:
+```
+nc -lvnp 4444
+```
+JUGUEI COM RESPONSABILIDADE! 
 
 ⚠️ Aviso Legal
 Este script foi criado para fins educacionais e demonstrações controladas.
 Não o utilizes em sistemas sem permissão explícita. A utilização indevida pode ser considerada crime cibernético.
+
+Projeto open source, seja livre para modificar! 💪
+
+Fiz jogo à todos...
